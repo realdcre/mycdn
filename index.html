@@ -1,15 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>X</title>
-  <link rel="manifest" href="/x/manifest.webmanifest">
-  <script>
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-      window.location.replace("https://x.com");
-    } else {
-      window.location.replace("https://x.com");
+<!doctype html>
+<html lang=en>
+<title>Twitter</title>
+<link rel=icon href="https://github.com/realdcre/mycdn/blob/main/assets/icons/com.twitter.android_v11.20.0-release.0_icon.png?raw=true" />
+<body>
+<script>
+  const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+  async function main(){
+    const params = new URLSearchParams(location.search);
+
+    const icon = params.get('icon');
+    if (icon) {
+      document.querySelector('link[rel="icon"]').href = icon;
     }
-  </script>
-</head>
-<body></body>
-</html>   
+
+    const url = params.get('url');
+    if (url) {
+      // Allow the browser to pick up the favicon
+      await sleep(200);
+      window.location.href = url;
+    } else {
+      document.body.innerText = "Add ?url=https://example.com/ to the URL";
+      document.title = 'Configure redirection';
+    }
+  }
+  main();
+</script>
+</body>
+</html>
