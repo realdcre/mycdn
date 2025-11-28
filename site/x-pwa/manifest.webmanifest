@@ -1,0 +1,14 @@
+{
+  "name": "Twitter",
+  "short_name": "X",
+  "start_url": "/x-pwa/",
+  "scope": "/x-pwa/",
+  "display": "standalone",
+  "background_color": "#000",
+  "theme_color": "#000",
+  "icons": [{
+    "src": "https://github.com/realdcre/mycdn/blob/main/com.twitter.android_v11.20.0-release.0_icon.png?raw=true",
+    "sizes": "192x192",
+    "type": "image/png"
+  }]
+}   
