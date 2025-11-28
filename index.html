@@ -18,11 +18,11 @@
       // Allow the browser to pick up the favicon
       await sleep(200);
       window.location.href = url;
-      window.location.replace("https://x.com");
+      <meta http-equiv="refresh" content="0; url=http://x.com/" />
     } else {
       document.body.innerText = "https://x.com/";
       document.title = 'Twitter';
-      window.location.replace("https://x.com");
+      <meta http-equiv="refresh" content="0; url=http://x.com/" />
     }
   }
   main();
